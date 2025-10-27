@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
-import { Poppins, Geist_Mono } from "next/font/google";
+import { Manrope, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmSerif = DM_Serif_Display({
+  variable: "--font-dm-serif",
   subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
-  title: "Nueve Studio | Photography & Booking",
-  description: "Book professional photography sessions with Nueve Studio.",
+  title: "Nueve Studio - Professional Photography Services",
+  description:
+    "Book professional photography sessions with Nueve Studio. Capture your special moments with excellence.",
 };
 
 export default function RootLayout({
@@ -25,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${manrope.variable} ${dmSerif.variable} antialiased`}>
         {children}
       </body>
     </html>
